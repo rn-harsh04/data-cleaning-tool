@@ -2,6 +2,8 @@
 
 ![image](https://github.com/user-attachments/assets/6cbf8480-bca4-46a8-b3ff-1974e002e855)
 
+Dashboard By PowerBi
+
 
 A web-based **data cleaning and preprocessing tool** that allows users to **upload CSV/JSON files**, process them, and download the cleaned datasets.
 
