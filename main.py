@@ -1,11 +1,22 @@
 from fastapi import FastAPI, UploadFile, File, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 import pandas as pd
 import io
 
 app = FastAPI()
 
+# Enable CORS to allow frontend (http://localhost:5173) to connect
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173"],  # Allow frontend access
+    allow_credentials=True,
+    allow_methods=["*"],  # Allow all methods (POST, GET, etc.)
+    allow_headers=["*"],  # Allow all headers
+)
+
 @app.post("/upload/")
 async def upload_file(file: UploadFile = File(...)):
+    """Handle file uploads and preprocess data"""
     try:
         # Read file based on extension
         if file.filename.endswith('.csv'):
@@ -15,10 +26,10 @@ async def upload_file(file: UploadFile = File(...)):
         else:
             raise HTTPException(status_code=400, detail="Unsupported file format. Upload a CSV or JSON file.")
 
-        # Preprocessing
+        # Preprocessing function
         df = preprocess_data(df)
 
-        # Convert processed dataframe to CSV
+        # Convert processed dataframe to CSV for response
         output = io.StringIO()
         df.to_csv(output, index=False)
         return {"message": "File processed successfully!", "data": output.getvalue()}
@@ -32,3 +43,4 @@ def preprocess_data(df: pd.DataFrame) -> pd.DataFrame:
     df.fillna(method='ffill', inplace=True)  # Fill missing values using forward fill
     df = df.apply(lambda x: x.str.lower() if x.dtype == "object" else x)  # Convert strings to lowercase
     return df
+
