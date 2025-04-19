@@ -9,7 +9,7 @@ A web-based **data cleaning and preprocessing tool** that allows users to **uplo
 
 ---
 ✨ Full Features
-📤 File upload (CSV/JSON)
+📤 File upload (CSV)
 
 🧹 Data cleaning:
 
