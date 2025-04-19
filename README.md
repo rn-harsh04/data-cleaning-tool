@@ -8,95 +8,66 @@ Dashboard By PowerBi
 A web-based **data cleaning and preprocessing tool** that allows users to **upload CSV/JSON files**, process them, and download the cleaned datasets.
 
 ---
+✨ Full Features
+📤 File upload (CSV/JSON)
 
-## 💄 Clone This Project
+🧹 Data cleaning:
 
-To clone this project to your **VS Code**, open the terminal and run:
+Duplicate removal
 
+Missing value handling
+
+Text normalization
+
+📊 NEW: Real-time analytics dashboard
+
+📥 Cleaned data export
+
+🎨 Responsive UI (Tailwind CSS)
+
+🆕 New Features (Latest Update)
+📊 Real-time Analytics Dashboard:
+
+Visual data statistics with Chart.js
+
+Interactive data visualizations
+
+Live updates during data cleaning
+
+Enhanced user experience
+## 🚀 Quick Start
+
+### Clone the Project
 ```sh
-git clone https://github.com/yourusername/repo-name.git
-```
-Then, navigate into the project folder:
-
+git clone https://github.com/rn-harsh04/data-cleaning-tool.git
+cd data-cleaning-tool
+🛠️ Setup
+1. Backend (FastAPI)
 ```sh
-cd repo-name
-```
+# Create and activate virtual environment
+python -m venv venv
+# Windows
+venv\Scripts\activate
+# Mac/Linux
+source venv/bin/activate
 
----
+# Install Python dependencies
+pip install fastapi uvicorn pandas python-multipart
+2. Frontend (React)
+```sh
+# Install Node.js dependencies
+npm install
 
-## 🚀 Running the Project
+# Start both servers:
+# In one terminal (backend):
+uvicorn main:app --reload
 
-### **🔹 1⃣ Backend (FastAPI - Python)**
-The backend is built using **FastAPI** and **Pandas** for data processing.
+# In another terminal (frontend):
+npm run dev
+📌 Access:
 
-#### **🔧 Setup & Run Backend**
-1. **Create a virtual environment** (optional but recommended):
-   ```sh
-   python -m venv venv
-   ```
-2. **Activate the virtual environment**:
-   - **Windows**:  
-     ```sh
-     venv\Scripts\activate
-     ```
-   - **Mac/Linux**:  
-     ```sh
-     source venv/bin/activate
-     ```
+Backend: http://127.0.0.1:8000
 
-3. **Install dependencies**:
-   ```sh
-   pip install -r requirements.txt
-   ```
+Frontend: http://localhost:5173
 
-4. **Start the FastAPI server**:
-   ```sh
-   uvicorn main:app --reload
-   ```
-5. **Backend is running at:**  
-   👉 Open: [`http://127.0.0.1:8000`](http://127.0.0.1:8000)  
-   👉 API Docs: [`http://127.0.0.1:8000/docs`](http://127.0.0.1:8000/docs) (Swagger UI)
-
----
-
-### **🔹 2⃣ Frontend (React - JavaScript)**
-The frontend is built using **React.js** with **Axios** for API calls.
-
-#### **🔧 Setup & Run Frontend**
-1. Navigate to the frontend folder:
-   ```sh
-   cd frontend
-   ```
-
-2. **Install dependencies**:
-   ```sh
-   npm install
-   ```
-
-3. **Start the React development server**:
-   ```sh
-   npm run dev
-   ```
-4. **Frontend is running at:**  
-   👉 [`http://localhost:5173`](http://localhost:5173)
-
----
-
-## 🛠️ Features
-✔️ Upload CSV/JSON files  
-✔️ Automated data cleaning (removes duplicates, fills missing values, converts text to lowercase)  
-✔️ Download the cleaned dataset  
-✔️ Simple & modern UI  
-
----
-
-## 🤝 Contributing
-Feel free to contribute by submitting a **pull request**! For major changes, open an **issue first** to discuss your ideas.
-
----
-
-## 📝 License
-This project is **open-source** and available under the **MIT License**.
-
----
-
+API Docs: http://127.0.0.1:8000/docs
