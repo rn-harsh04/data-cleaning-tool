@@ -5,7 +5,7 @@ import {
   BarElement, 
   LinearScale, 
   CategoryScale, 
-  Tooltip, 
+  Tooltip,
   Legend,
   PieController,
   ArcElement,
