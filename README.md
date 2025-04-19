@@ -5,7 +5,7 @@
 Dashboard By PowerBi
 
 
-A web-based **data cleaning and preprocessing tool** that allows users to **upload CSV/JSON files**, process them, and download the cleaned datasets.
+A web-based **data cleaning and preprocessing tool** that allows users to **upload CSV files**, process them, and download the cleaned datasets.
 
 ---
 ✨ Full Features
