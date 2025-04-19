@@ -43,8 +43,8 @@ git clone https://github.com/rn-harsh04/data-cleaning-tool.git
 cd data-cleaning-tool
 🛠️ Setup
 1. Backend (FastAPI)
-```sh
-# Create and activate virtual environment
+sh
+# Create and activate virtual environment(optional but recommended)
 python -m venv venv
 # Windows
 venv\Scripts\activate
@@ -54,9 +54,10 @@ source venv/bin/activate
 # Install Python dependencies
 pip install fastapi uvicorn pandas python-multipart
 2. Frontend (React)
-```sh
+sh
 # Install Node.js dependencies
 npm install
+npm install chart.js axios
 
 # Start both servers:
 # In one terminal (backend):
